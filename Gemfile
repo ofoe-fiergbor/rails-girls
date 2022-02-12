@@ -9,6 +9,8 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+gem 'devise'
+gem 'gravtastic'
 # Use sqlite3 as the database for Active Record
 group :development do
   gem 'sqlite3'
@@ -17,6 +19,7 @@ group :production do
   gem 'pg'
 end
 gem 'carrierwave'
+gem 'mini_magick'
 gem 'net-ssh'
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -57,6 +60,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'rspec-rails', '~> 3.8'
 end
 
 group :development do
@@ -72,6 +76,7 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'shoulda-matchers'
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
